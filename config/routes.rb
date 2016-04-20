@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  resources :artists
+  resources :songs
+
+
+
+  get 'songs/index'
+
+  get 'songs/show'
+
+
   root 'artists#index'
 
   get 'artists/show'
