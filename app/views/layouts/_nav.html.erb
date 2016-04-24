@@ -15,9 +15,7 @@
       </ul>
        <!-- <a href="#">Inbox <span class="badge">42</span></a> -->
        <ul class="nav navbar-nav navbar-right">
-         <button class="btn btn-default btn-xs" type="button">
-           Messages <span class="badge">4</span>
-         </button>
+         
           <!-- <li><a href="#">Your Profile</a></li> -->
           <% if current_user %>
             <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
