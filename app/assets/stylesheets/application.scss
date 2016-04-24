@@ -1,0 +1,246 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ @import 'bootstrap';
+ @import "bootstrap-sprockets";
+ @import 'nav';
+
+ body {
+     padding-top: 4%;
+ }
+ .row {
+   display: inline-block;
+ }
+ .form-group-1{
+   margin-top: 10px;
+ }
+
+ .location {
+   margin-left: 15%;
+     margin-top: 20px;
+     text-align: center;
+     font-style: italic;
+ }
+ #list-horizontal {
+     padding: 0px;
+     text-align: center;
+ }
+
+ #list-horizontal li {
+     display: inline-block;
+ }
+
+ .title-box {
+     margin-top: 5%;
+     opacity: 1;
+ }
+
+ .title-box h1 {
+     font-size: 150px !important;
+ }
+
+ .rent-title {
+     color: white;
+ }
+ .tipi-description {
+     text-align: center;
+     margin-bottom: 15px;
+     margin-left: 5px;
+ }
+
+ h1,
+ h2,
+ h3 {
+     text-align: center;
+ }
+
+ .login-field {
+     text-align: center;
+     padding-top: 20px;
+     background: #fdfdfd;
+     border-radius: 4px;
+     width: 98%;
+     box-shadow: 1px 1px 2px #333333;
+ }
+
+ .login-field input {
+     min-width: 300px;
+     width: 60%;
+     height: 45px;
+     text-align: center;
+     border-radius: 4px;
+     border: 0;
+     margin: 20px;
+     padding-bottom: 10px;
+     padding-top: 10px;
+     box-shadow: 1px 1px 2px #333333;
+     font-style: italic;
+ }
+
+ // removes bullets
+
+ .no-bullets {
+     list-style-type: none;
+ }
+
+
+ .tipi-pic {
+     float: right;
+     border-radius: 3px !important;
+     margin-left: 15px !important;
+     margin-right: 10px;
+     margin-top: 10px;
+     margin-bottom: 15px;
+     box-shadow: 2px 2px 3px #333333;
+ }
+ .tipi-row {
+     background: white;
+     margin-left: 15px;
+     width: 85%;
+     box-shadow: 2px 2px 3px #333333;
+     border-radius: 5px;
+ }
+
+ @media screen and (max-width: 480px) {
+   .title-box h1 {
+       font-size: 75px !important;
+   }
+ }
+ .big-box {
+     background: rgba(250, 250, 250, 0.55) !important;
+     background: #f2f2f2;
+     margin-top: 15%;
+     border-radius: 5px;
+     box-shadow: 2px 2px 4px #333333;
+     background-size: cover;
+     overflow: hidden;
+     margin-bottom: 1%
+ }
+
+ .tipi-box {
+     background: rgba(253, 253, 253, 0.85) !important;
+     border-radius: 3px;
+     margin: 20px;
+     box-shadow: 1px 1px 2px #333333;
+     margin: auto;
+     margin-right: 15px;
+ }
+ .price-persons {
+
+     margin-top: 5px;
+     padding-top: 15px;
+     color: white;
+     background: #404040;
+     margin-bottom: 0px;
+     height: 50px;
+   background: rgba(253, 253, 253, 0.85) !important;
+   border-radius: 3px;
+   margin: 20px;
+   padding-bottom: 10px;
+   box-shadow: 1px 1px 2px #333333;
+   margin: auto;
+ }
+
+ .bottom-text {
+   margin-left: 0px;
+   margin-right: 0px;
+ }
+
+ .italic-span {
+   font-style: italic;
+ }
+
+ .more-info {
+   background: black;
+ }
+
+ @media screen and (max-width: 960px) {
+   img {
+     margin-top: 15px;
+     width: 200px !important;
+   }
+     body {
+         font-size: 12px;
+     }
+     .title-box h1 {
+         font-size: 100px !important;
+     }
+     h1 {
+         font-size: 30px;
+     }
+     h2 {
+         font-size: 25px;
+     }
+     h3 {
+         font-size: 20px;
+     }
+ }
+ @media screen and (max-width: 480px) {
+
+   .artist-description {
+     width: 125px;
+     margin-left: 20px;
+   }
+
+   img {
+     margin-top: 15px;
+     max-width: 125px !important;
+   }
+
+
+     body {
+         font-size: 11px;
+     }
+     h1 {
+         font-size: 25px;
+     }
+     h2 {
+         font-size: 20px;
+     }
+     h3 {
+         font-size: 15px;
+     }
+     .title-box h1 {
+         font-size: 55px !important;
+     }
+ }
+
+ a:link {
+     color: #131339;
+ }
+
+ /* visited link */
+ a:visited {
+     color: #131339;
+ }
+
+ /* mouse over link */
+ a:hover {
+     color: #333399;
+ }
+
+ /* selected link */
+ a:active {
+     color: #9f9fdf;
+ }
+
+ .visible {
+
+ }
+
+ #pic {
+   display: inline;
+   align-items: center;
+ }

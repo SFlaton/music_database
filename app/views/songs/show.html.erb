@@ -1,2 +1,6 @@
-<h1>Songs#show</h1>
-<p>Find me in app/views/songs/show.html.erb</p>
+
+<h1>Name: <%= @song.artist.name%></h1>
+<h2>Title: <%= @song.title%></h2>
+<h3>Year: <%= @song.year%></h3>
+<h3>Album: <%=@song.album%></h3>
+<h3><%= image_tag(@song.cover)%></h3>

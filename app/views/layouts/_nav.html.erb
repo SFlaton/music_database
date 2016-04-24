@@ -1,0 +1,39 @@
+<nav class="navbar navbar-fixed-top navbar-default">
+ <div class="container-fluid">
+    <div class="navbar-header">
+       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+       </button>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+       <ul class="nav navbar-nav">
+          <li><%= link_to "artists", artists_path %></li>
+          <li><%= link_to "all songs", songs_path %></li>
+      </ul>
+       <!-- <a href="#">Inbox <span class="badge">42</span></a> -->
+       <ul class="nav navbar-nav navbar-right">
+         <button class="btn btn-default btn-xs" type="button">
+           Messages <span class="badge">4</span>
+         </button>
+          <!-- <li><a href="#">Your Profile</a></li> -->
+          <% if current_user %>
+            <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+            <% else %>
+            <li><%= link_to "Log in",  user_session_path %> </li>
+            <li><%= link_to "Sign up", new_user_registration_path %></li>
+            <% end %>
+       </ul>
+       <div class="form-group-1">
+
+       <%= form_tag(artists_path, :method => "get", id: "search-form") do %>
+        <%= text_field_tag :search, params[:search], placeholder: "Search artist" %>
+        <%= submit_tag "Search", :name => nil %>
+      <% end %>
+
+      </div>
+    </div>
+ </div>
+</nav>
