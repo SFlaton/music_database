@@ -1,6 +1,3 @@
 
 
-      <h3><%= link_to song.title, song %></h3>
-      <h4><%= link_to song.artist.name, song.artist %></h4>
-
-      <p><%= song.year %></p>
+      <h3><%= song.artist.name%><%= " - " %><%= link_to song.title, song%><%=" - " %><%= song.year%></h3>

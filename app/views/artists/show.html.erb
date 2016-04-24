@@ -1,2 +1,16 @@
-<h1>Artists#show</h1>
-<p>Find me in app/views/artists/show.html.erb</p>
+
+
+
+  <div class="thumbnail">
+    <%= image_tag(@artist.image, size: "500x500") %>
+    <div class="caption">
+      <h2><%= @artist.name %></h2>
+      <h2>Bio:</h2>
+      <h3><%=@artist.description%></h3>
+      <br>
+      <br>
+      <h2>List of songs:</h2>
+      <% songs = @artist.songs.sort_by { |song| song.year } %>
+      <%= render songs %>
+    </div>
+  </div>
