@@ -14,3 +14,7 @@
       <%= render songs %>
     </div>
   </div>
+
+<% if current_user %>
+<%= link_to "New Song", new_song_path( artist_id: @artist.id ), class: "btn btn-default", style: "float: right" %></h2>
+<%end%>
