@@ -15,3 +15,7 @@
     </div>
   <% end %>
 </div>
+
+<% if current_user %>
+<%= link_to "Add Artist", new_artist_path %>
+<%end%>
