@@ -1,7 +1,11 @@
 # encoding: utf-8
+
 class ImageUploader < CarrierWave::Uploader::Base
-  storage :file
-   def store_dir
-   "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
-   end
+  include Cloudinary::CarrierWave
+
+  version :thumbnail do
+   eager
+   resize_to_fit(500, 500)
+   cloudinary_transformation :quality => 80
+ end
 end

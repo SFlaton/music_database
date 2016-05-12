@@ -29,7 +29,6 @@ ActiveRecord::Schema.define(version: 20160422173151) do
     t.integer  "artist_id"
     t.integer  "year"
     t.string   "album"
-    t.string   "cover"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

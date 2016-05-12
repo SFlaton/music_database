@@ -27,10 +27,24 @@ class ArtistsController < ApplicationController
      end
   end
 
+  def destroy
+    @artist = Artist.find(params[:id])
+
+    respond_to do |format|
+      if @artist.destroy
+        format.html {redirect_to @artists, notice: "song was destroyed"}
+        format.json {head :no_content}
+      else
+        format.html {render :show}
+        format.json {render json: @artist.errors}
+      end
+    end
+  end
+
 
 private
 def artist_params
-   params.require( :artist ).permit( :name, :description )
+   params.require( :artist ).permit( :name, :description, :image )
 end
 
 

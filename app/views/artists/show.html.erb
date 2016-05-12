@@ -2,7 +2,8 @@
 
 
   <div class="thumbnail">
-    <%= image_tag(@artist.image, size: "500x500") %>
+    <%= image_tag @artist.image_url.to_s, size: "500x500" %>
+
     <div class="caption">
       <h2><%= @artist.name %></h2>
       <h2>Bio:</h2>
@@ -16,5 +17,6 @@
   </div>
 
 <% if current_user %>
-<%= link_to "New Song", new_song_path( artist_id: @artist.id ), class: "btn btn-default", style: "float: right" %></h2>
+<%= link_to "New Song", new_artist_song_path( artist_id: @artist.id ), class: "btn btn-default", style: "float: right" %></h2>
+
 <%end%>

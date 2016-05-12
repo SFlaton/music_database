@@ -3,4 +3,7 @@
 <h2>Title: <%= @song.title%></h2>
 <h3>Year: <%= @song.year%></h3>
 <h3>Album: <%=@song.album%></h3>
-<h3><%= image_tag(@song.cover)%></h3>
+
+<% if current_user %>
+<%= link_to "delete", [@artist, @artist.songs.build], method: :delete, data: { confirm: 'Are you sure?' }%>
+<%end%>
